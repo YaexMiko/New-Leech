@@ -207,7 +207,7 @@ MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002202742543')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002481841000')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
     
@@ -222,7 +222,7 @@ def wztgClient(*args, **kwargs):
 
 IS_PREMIUM_USER = False
 user = ''
-USER_SESSION_STRING = environ.get('USER_SESSION_STRING', 'BQF62SUAHbUMUqj0hHQB1d4SZ9Bwa_ysluVESlydshAA_xpmFz8BEgZL69jDXKQx-gcyIHvFQZj31X_ClozcRev5sXXt1eYawF9lLeGi0kaUSaDO4w9tTjU_HAnmexpKYpZncj3PgWjmYoDyvW6tcHqpsDVwNIaLUJ1tJkQbgCyqu7Y7zGoGgihsW0Kw3D5_Z4vHkkl3v146JPGMui_Amh3ZRRMJ0ruTGY_HfiueDASJRuw6j1Qx1hSd_pmMbF44ENh8D3u8aBhln1eQNemySecoz7FMGSGjpQK2hGvkUeKnSSVz_BEHGzpl3rg4E3LBxDT09UW4sBCyk7ge_j3Bxie-HU36QwAAAAHjSo0pAA')
+USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
 if len(USER_SESSION_STRING) != 0:
     log_info("Creating client from USER_SESSION_STRING")
     try:
@@ -310,16 +310,16 @@ if len(SEARCH_PLUGINS) == 0:
 
 MAX_SPLIT_SIZE = 4194304000 if IS_PREMIUM_USER else 2097152000
 
-LEECH_SPLIT_SIZE = environ.get('LEECH_SPLIT_SIZE', '4')
+LEECH_SPLIT_SIZE = environ.get('LEECH_SPLIT_SIZE', '')
 if str(LEECH_SPLIT_SIZE) in ["4194304000", "2097152000"] or len(LEECH_SPLIT_SIZE) == 0 or int(LEECH_SPLIT_SIZE) > MAX_SPLIT_SIZE:
     LEECH_SPLIT_SIZE = MAX_SPLIT_SIZE
 else:
     LEECH_SPLIT_SIZE = int(LEECH_SPLIT_SIZE)
 
-BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '')
+BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '15')
 BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ''
 
-STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '')
+STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '20')
 if len(STATUS_UPDATE_INTERVAL) == 0:
     STATUS_UPDATE_INTERVAL = 10
 else:
@@ -378,7 +378,7 @@ USE_SERVICE_ACCOUNTS = USE_SERVICE_ACCOUNTS.lower() == 'true'
 WEB_PINCODE = environ.get('WEB_PINCODE', '')
 WEB_PINCODE = WEB_PINCODE.lower() == 'true'
 
-AS_DOCUMENT = environ.get('AS_DOCUMENT', '')
+AS_DOCUMENT = environ.get('AS_DOCUMENT', 'true')
 AS_DOCUMENT = AS_DOCUMENT.lower() == 'true'
 
 ENBALE_WATERMARK = environ.get('ENBALE_WATERMARK', 'true')
@@ -396,7 +396,7 @@ SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == 'true'
 SCREENSHOTS_MODE = environ.get('SCREENSHOTS_MODE', 'true')
 SCREENSHOTS_MODE = SCREENSHOTS_MODE.lower() == 'true'
 
-SOURCE_LINK = environ.get('SOURCE_LINK', '')
+SOURCE_LINK = environ.get('SOURCE_LINK', 'true')
 SOURCE_LINK = SOURCE_LINK.lower() == 'true'
 
 DELETE_LINKS = environ.get('DELETE_LINKS', 'true')

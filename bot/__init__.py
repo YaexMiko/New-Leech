@@ -116,7 +116,7 @@ if DATABASE_URL:
         del qbit_opt['_id']
         qbit_options = qbit_opt
     conn.close()
-    BOT_TOKEN = environ.get('BOT_TOKEN', '7857513137:AAEwY8WAci5znpmhv8wb8_NGszrZVU9XVE8')
+    BOT_TOKEN = environ.get('BOT_TOKEN', '7412589100:AAEYZqmt1PcknbuxDYA5z80zL0vfIxFkt68')
     bot_id = BOT_TOKEN.split(':', 1)[0]
     DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://Terabox:aloksingh@terabox.rmk69.mongodb.net/?retryWrites=true&w=majority')
 else:
@@ -172,7 +172,7 @@ if len(DOWNLOAD_DIR) == 0:
 elif not DOWNLOAD_DIR.endswith("/"):
     DOWNLOAD_DIR = f'{DOWNLOAD_DIR}/'
 
-AUTHORIZED_CHATS = environ.get('AUTHORIZED_CHATS', '-1002205076761 -1001926063065')
+AUTHORIZED_CHATS = environ.get('AUTHORIZED_CHATS', '-1004747853458')
 if AUTHORIZED_CHATS:
     aid = AUTHORIZED_CHATS.split()
     for id_ in aid:
@@ -182,7 +182,7 @@ if AUTHORIZED_CHATS:
         if topic_ids:
             user_data[chat_id].setdefault('topic_ids', []).extend(map(int, topic_ids))
 
-SUDO_USERS = environ.get('SUDO_USERS', '')
+SUDO_USERS = environ.get('SUDO_USERS', '8074755883')
 if len(SUDO_USERS) != 0:
     aid = SUDO_USERS.split()
     for id_ in aid:
@@ -207,7 +207,7 @@ MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002414918127')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002409370934')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
     
